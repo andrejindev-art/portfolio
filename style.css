@@ -1,0 +1,150 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* CORES E VARIÁVEIS (Opcional, mas mostra domínio) */
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #34495e;
+    --cor-fundo: #f4f4f4;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.avatar-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* NAVEGAÇÃO */
+nav {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* LAYOUT PRINCIPAL (Desktop) */
+.container-principal {
+    display: flex; /* Coloca Main e Aside lado a lado no PC */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+main {
+    flex: 3; /* Ocupa 3 partes do espaço */
+}
+
+aside {
+    flex: 1; /* Ocupa 1 parte do espaço */
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.projeto-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    margin-top: 20px;
+}
+
+/* Espaçamento dos parágrafos na seção Sobre Mim */
+#sobre p {
+    margin-bottom: 12px;
+}
+
+/* RESPONSIVIDADE (MOBILE) - OBRIGATÓRIO NA ATIVIDADE */
+@media (max-width: 768px) {
+    .container-principal {
+        flex-direction: column; /* No celular, o Aside vai para baixo do Main */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Menu empilhado no celular */
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Ativa a rolagem suave para toda a página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização dos botões dentro das seções */
+.btn-voltar {
+  display: block;
+  text-align: right;       /* Alinha o link à direita da seção */
+  margin-top: 20px;        /* Dá um espaço do texto acima */
+  color: #333;             /* Cor do texto/seta */
+  text-decoration: none;   /* Remove o sublinhado padrão de link */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Efeito simples ao passar o mouse */
+.btn-voltar:hover {
+  color: #007BFF;          /* Altera a cor para azul no hover */
+  text-decoration: underline;
+}
